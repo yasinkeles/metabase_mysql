@@ -51,6 +51,9 @@ Bu rehber, Windows Server 2022 üzerinde kurulu WSL üzerinden çalışan Docker
 9. **Daha Fazlası İçin Resmi Belgeleri İnceleyin**
    - Bu rehber, sadece kişisel deneyimlerime dayanmaktadır. Daha fazla bilgi için [Metabase Resmi Belgeleri](https://www.metabase.com/docs/) ile [Docker Belgeleri](https://docs.docker.com/)ni inceleyebilirsiniz.
 
+**bu yükseltme ile metabase ye sonradan eklediğiniz driverlar docker konteyneri değiştiği için devre dışı kalacaktır, onları yeniden konteynere dahil etmelisiniz.**
+- genellikle "\\wsl.localhost\docker-desktop\tmp\docker-desktop-root\var\lib\docker\overlay2\XXXXXXXXXXXXXX\diff\plugins" altında bulunur.
+
 # ENGLISH VERSION
 # Metabase Database Backup Migration to MySQL Guide
 
@@ -103,3 +106,6 @@ This guide explains the steps to migrate a Metabase database backup to MySQL for
 
 9. **Consult Official Documentation for More Information**
    - This guide is based on personal experience. For more details, refer to the [Metabase Official Documentation](https://www.metabase.com/docs/) and [Docker Documentation](https://docs.docker.com/).
+  
+**With this upgrade, the drivers you added to the metabase will be disabled because the docker container has changed, you need to include them in the container again.**
+- usually located under “\\wsl.localhost\docker-desktop\tmp\docker-desktop-root\var\lib\docker\overlay2\XXXXXXXXXXXXXXXXXXXX\diff\plugins”.
